@@ -7,15 +7,16 @@ export type Coordinate = {
 }
 
 interface GridComponentProps {
+    id: string;
     coordinate: Coordinate,
     isSelected?: boolean,
 }
 
-const GridComponent = ({coordinate, isSelected} : GridComponentProps) => {
+const GridComponent = ({id, coordinate, isSelected} : GridComponentProps) => {
     const position: Coordinate = coordinate;
 
     return(
-        <div id="grid" className={styles.gridComponent}>
+        <div id={`${id}`} className={styles.gridComponent}>
         </div>
     )
 }
