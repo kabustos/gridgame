@@ -2,7 +2,7 @@
 import styles from './page.module.css'
 import { Coordinate } from "./GridComponent";
 
-const SelectedGrid = ({position}) => {
+const PlayerComponent = ({position}) => {
 
 
     return(
@@ -12,4 +12,4 @@ const SelectedGrid = ({position}) => {
     )
 }
 
-export default SelectedGrid;
+export default PlayerComponent;
