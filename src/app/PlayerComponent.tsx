@@ -1,10 +1,6 @@
-
 import styles from './page.module.css'
-import { Coordinate } from "./GridComponent";
 
-const PlayerComponent = ({position}) => {
-
-
+const PlayerComponent = () => {
     return(
         <div className={styles.selectedGrid}>
             {">.<"}
