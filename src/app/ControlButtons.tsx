@@ -34,4 +34,3 @@ const ControlButtons = ({move, position}: ControlButtonsProps) => {
 }
 
 export default ControlButtons;
-
