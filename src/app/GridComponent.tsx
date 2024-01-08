@@ -1,5 +1,6 @@
 import { useState } from "react"
 import styles from './page.module.css'
+import PlayerComponent from "./PlayerComponent"
 
 export type Coordinate = {
     x: number,
@@ -7,17 +8,24 @@ export type Coordinate = {
 }
 
 interface GridComponentProps {
-    id: string;
     coordinate: Coordinate,
-    isSelected?: boolean,
+    spritePosition: Coordinate
 }
 
-const GridComponent = ({id, coordinate, isSelected} : GridComponentProps) => {
-    const position: Coordinate = coordinate;
+const GridComponent = ({coordinate, spritePosition} : GridComponentProps) => {
+    let isSelected: Boolean = false;
+
+    if(JSON.stringify(spritePosition) == JSON.stringify(coordinate)){
+        isSelected = true;
+    }
 
     return(
-        <div id={`${id}`} className={styles.gridComponent}>
+        <>
+        <div id={`${coordinate}`} className={styles.gridComponent}>
+        {isSelected &&
+            <PlayerComponent/>}
         </div>
+        </>
     )
 }
 
