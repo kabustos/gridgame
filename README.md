@@ -1,8 +1,11 @@
+## Description
+This project is a small react project that displays a sprite on a 3x3 grid.  The sprite can move up, down, left or right. When it reaches the edge of the grid, it will stay if it cannot move in the chosen direction.  
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
-
-First, run the development server:
+Clone the project then run the development server:
 
 ```bash
 npm run dev
@@ -13,35 +16,19 @@ pnpm dev
 # or
 bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Game Screen
+<img width="465" alt="Screenshot 2024-01-07 at 9 18 42 PM" src="https://github.com/kabustos/gridgame/assets/43449340/9718f267-afc7-40a2-a79e-b383c971947a">
 
-## Learn More
+## Learnings
+- Couple rendering logic so the sprite and grid can be positioned relative to each other.
+- Be cautious of falling into render loops.
+- Event handlers require function to be PASSED to them, not called.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-Prompt
-3x3 grid display 
-    single grid component
-    each has an id -> coordinate state, isSelected
-Selected square is filled with some chosen color
-    
-Clicking the button will move the selected square in the respective direction
-
-The selection will wrap if it's on the edge of the 
+## Improvements
+- Have the sprite wrap around the grid once it reaches any edge.
+- Fix styling on the game screen so the buttons stay below the game grid.
+- Center the sprite to the grid tile. 
 
