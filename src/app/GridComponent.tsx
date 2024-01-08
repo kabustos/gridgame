@@ -26,7 +26,6 @@ const GridComponent = ({coordinate, spritePosition} : GridComponentProps) => {
             <PlayerComponent/>}
         </div>
         </>
-
     )
 }
 

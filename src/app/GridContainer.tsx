@@ -21,11 +21,11 @@ const GridContainer = () => {
                 x = x-1;
                 newLocation = { x, y }; 
                 break;
-            case "left":   
+            case "right":   
                 y = y+1;
                 newLocation = { x, y }; 
                 break;
-            case "right":       
+            case "left":       
                 y = y-1;
                 newLocation = { x, y }; 
                 break;
